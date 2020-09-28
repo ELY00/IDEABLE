@@ -1,0 +1,36 @@
+{
+  "name": "kzilla-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "restart": "lite-server",
+    "lite-server": "run-lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ELY00/IDEABLE_00.git"
+  },
+  "author": "ANKIT KUMAR DAS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ELY00/IDEABLE_01/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "lite-server": "^2.5.4",
+    "mongodb": "^3.6.2",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.2.0",
+    "node-fetch": "^2.6.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "util": "^0.12.3"
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.jing.fm/clipimg/full/278-2783456_pen-nib-vector-png.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEABLE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/LogSign.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!--
+		<script>
+        function check(){
+			var count=0;
+			var uname = document.getElementById("Username");
+			var pass = document.getElementById("Password");
+			var ppass=document.getElementById("Password").value;
+			var checkpass=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+
+			/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+			if(uname.value.trim().length<5)
+			{
+				alert("Username is either short or empty");
+				uname.style.border = "solid 1.5px red";
+				document.getElementById("userlab").style.visibility="visible";
+				document.getElementById("userlab").style.color="red";
+				count++;
+			}
+			if(uname.value.trim().length>=5)
+			{
+				uname.style.border = "solid 1.5px green";
+				document.getElementById("userlab").style.color="green";
+				document.getElementById("userlab").style.visibility="hidden";
+			}
+			 /*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+			if (count>0)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+			}
+		</script>-->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/Idea"><i class="fas fa-pen-nib"></i>IDEABLE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item toggle">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item toggle">
+                        <a class="nav-link" href="/about">ABOUT</a>
+                    </li>
+                    <li class="nav-item toggle">
+                        <a class="nav-link" href="/contact">CONTACT US</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/login">LOGIN<i class="fas fa-user"></i></a>
+                    </li>
+                    <li class="nav-item toggle">
+                        <a class="nav-link" href="/sign">SIGN UP<i class="fas fa-user-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="content">
+                    <h1>IDEABLE</h1>
+                    <h2>LOGIN</h2>
+                    <div id="sign">
+                        <i class="fas fa-user fa-8x"></i>
+                    </div>
+                    <form action="/logindata" method="POST">
+                        <i class="fas fa-at fa-2x"></i>
+                        <input name="username" type="text" placeholder="username" required>
+                        <br><br>
+                        <i class="fas fa-key fa-2x"></i>
+                        <input name="password" type="password" placeholder="password" required>
+                        <br><br>
+                        <p style="color: red;" id='test'></p>
+                        <div data-theme="dark" style="display: flex; justify-content: center;" class="g-recaptcha brochure__form__captcha" data-sitekey="6LfbfswZAAAAAGeqwbES88jIbPMsyAR3XZCe3ZSk"></div>
+                        <br>
+                        <button type="submit" class="btn btn-outline-light btn-lg bg-transparent">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var e = '<%= x %>';
+        if (!e) {
+            console.log('null')
+        } else {
+            document.getElementById('test').innerHTML = e;
+            // alert('Username or password fault')
+            console.log(e);
+        }
+    </script>
+</body>
+</html>

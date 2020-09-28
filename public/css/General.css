@@ -1,0 +1,47 @@
+body{
+	background: url(https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1901&q=80);
+	background-size: cover;
+	background-position: center;
+}
+
+h1{
+	background: rgb(255,255,255);
+	background: radial-gradient(circle, rgba(255,255,255,1) 5%, rgba(154,154,154,1) 20%, rgba(0,0,0,1) 40%);
+	-webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+	font-size: 5em;
+	color: white;
+/*	-webkit-text-stroke: 1px black;*/
+}
+
+h4 {
+	background: rgb(255,255,255);
+	background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(121,121,121,1) 20%, rgba(0,0,0,1) 40%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	color: black;
+	/*	-webkit-text-stroke: 1px black;*/
+}
+
+#content{
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+	padding-top: 25%;
+	margin: 0 auto;
+}
+
+.btn{
+	color: darkred;
+}
+
+.navbar{
+	font-family: 'Oxygen', sans-serif;
+	opacity: 0.7;
+	color: white;
+}
+
+hr{
+	width: 500px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.5);
+}
